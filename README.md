@@ -1,4 +1,1 @@
-# AdvancedJava
-Advanced Java
-
-![image](https://raw.githubusercontent.com/greatestrabit/AdvancedJava/master/images/head.png)
+﻿详情请见博客:[梦里不知身是客](https://greatestrabit.github.io/)
