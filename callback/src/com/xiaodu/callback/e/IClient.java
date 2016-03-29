@@ -1,4 +1,4 @@
-package com.xiaodu.callback.e;
+﻿package com.xiaodu.callback.e;
 
 public interface IClient {
 	void recvAnswer(String answer);

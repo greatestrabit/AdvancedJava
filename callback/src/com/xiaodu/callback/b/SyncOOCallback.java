@@ -1,4 +1,4 @@
-package com.xiaodu.callback.b;
+ï»¿package com.xiaodu.callback.b;
 
 class A {
 	private final B b;
@@ -25,7 +25,7 @@ class B {
 }
 
 /**
- * ÃæÏò¶ÔÏóµÄÏà»¥µ÷ÓÃ
+ * é¢å‘å¯¹è±¡çš„ç›¸äº’è°ƒç”¨
  * @author xiaodu.email@gmail.com
  *
  */

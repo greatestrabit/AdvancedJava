@@ -1,9 +1,9 @@
-package com.xiaodu.callback.c;
+ï»¿package com.xiaodu.callback.c;
 
 import java.util.Random;
 
 /**
- * ÏàÓ¦ÇëÇóÕß,¼´Ìá¹©·şÎñÕß
+ * ç›¸åº”è¯·æ±‚è€…,å³æä¾›æœåŠ¡è€…
  * @author xiaodu.email@gmail.com
  *
  */

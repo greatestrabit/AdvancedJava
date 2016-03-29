@@ -1,8 +1,8 @@
-package com.xiaodu.callback.a;
+锘縫ackage com.xiaodu.callback.a;
 
 class A {
 	/**
-	 * 提出问题
+	 * 鎻愬嚭闂
 	 * @author xiaodu.email@gmail.com
 	 * @param b
 	 * @param question
@@ -12,7 +12,7 @@ class A {
 	}
 
 	/**
-	 * 处理结果
+	 * 澶勭悊缁撴灉
 	 * @author xiaodu.email@gmail.com
 	 * @param answer
 	 */
@@ -23,7 +23,7 @@ class A {
 
 class B {
 	/**
-	 * 计算结果
+	 * 璁＄畻缁撴灉
 	 * @author xiaodu.email@gmail.com
 	 * @param a
 	 * @param question
@@ -36,7 +36,7 @@ class B {
 }
 
 /**
- * 相互调用
+ * 鐩镐簰璋冪敤
  * @author xiaodu.email@gmail.com
  *
  */

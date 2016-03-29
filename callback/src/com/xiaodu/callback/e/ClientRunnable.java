@@ -1,7 +1,7 @@
-package com.xiaodu.callback.e;
+ï»¿package com.xiaodu.callback.e;
 
 /**
- * ×¨ÃÅÓÃÀ´Ö´ĞĞÇëÇóµÄÈÎÎñ,¹©Ïß³Ì³Øµ÷ÓÃ
+ * ä¸“é—¨ç”¨æ¥æ‰§è¡Œè¯·æ±‚çš„ä»»åŠ¡,ä¾›çº¿ç¨‹æ± è°ƒç”¨
  * @author xiaodu.email@gmail.com
  *
  */

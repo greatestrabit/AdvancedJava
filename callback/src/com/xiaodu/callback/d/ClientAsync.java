@@ -1,4 +1,4 @@
-package com.xiaodu.callback.d;
+锘縫ackage com.xiaodu.callback.d;
 
 public class ClientAsync implements IClient {
 	private final Server server;
@@ -8,7 +8,7 @@ public class ClientAsync implements IClient {
 	}
 
 	/**
-	 * 在线程中发出请求
+	 * 鍦ㄧ嚎绋嬩腑鍙戝嚭璇锋眰
 	 * @author xiaodu.email@gmail.com
 	 * @param question
 	 */

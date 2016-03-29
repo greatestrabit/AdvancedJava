@@ -1,13 +1,13 @@
-package com.xiaodu.callback.c;
+ï»¿package com.xiaodu.callback.c;
 
 /**
- * ÃæÏò½Ó¿ÚµÄÍ¬²½»Øµ÷
+ * é¢å‘æ¥å£çš„åŒæ­¥å›è°ƒ
  * @author xiaodu.email@gmail.com
  *
  */
 public class SyncInterfaceCallback {
 	/**
-	 * Ê¹ÓÃÄÚ²¿ÀàÀ´ÊµÏÖµÄ·½Ê½
+	 * ä½¿ç”¨å†…éƒ¨ç±»æ¥å®ç°çš„æ–¹å¼
 	 * @author xiaodu.email@gmail.com
 	 */
 	private static void innerMain() {

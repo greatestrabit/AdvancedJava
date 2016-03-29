@@ -1,7 +1,7 @@
-package com.xiaodu.callback.c;
+锘縫ackage com.xiaodu.callback.c;
 
 /**
- * 发出请求着需要实现的接口,要实现处理结果的方法
+ * 鍙戝嚭璇锋眰鐫�闇�瑕佸疄鐜扮殑鎺ュ彛,瑕佸疄鐜板鐞嗙粨鏋滅殑鏂规硶
  * @author xiaodu.email@gmail.com
  *
  */

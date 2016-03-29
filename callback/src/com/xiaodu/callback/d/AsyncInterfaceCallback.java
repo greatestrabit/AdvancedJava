@@ -1,13 +1,13 @@
-package com.xiaodu.callback.d;
+ï»¿package com.xiaodu.callback.d;
 
 /**
- * »ùÓÚ½Ó¿ÚµÄÒì²½»Øµ÷,Ã¿´Î½¨Á¢ĞÂµÄÏß³Ì
+ * åŸºäºæ¥å£çš„å¼‚æ­¥å›è°ƒ,æ¯æ¬¡å»ºç«‹æ–°çš„çº¿ç¨‹
  * @author xiaodu.email@gmail.com
  *
  */
 public class AsyncInterfaceCallback {
 	/**
-	 * Ê¹ÓÃÄÚ²¿ÀàµÄÊµÏÖ·½Ê½,´Ë´¦¿É¼û»Øµ÷µØÓü
+	 * ä½¿ç”¨å†…éƒ¨ç±»çš„å®ç°æ–¹å¼,æ­¤å¤„å¯è§å›è°ƒåœ°ç‹±
 	 * @author xiaodu.email@gmail.com
 	 */
 	private static void innerMain() {
