@@ -3,7 +3,7 @@
 import java.util.Random;
 
 /**
- * 相应请求者,即提供服务者
+ * 响应请求者,即提供服务者
  * @author xiaodu.email@gmail.com
  *
  */
