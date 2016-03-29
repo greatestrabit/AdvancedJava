@@ -1,6 +1,15 @@
 package com.xiaodu.callback.c;
 
+/**
+ * 面向接口的同步回调
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class SyncInterfaceCallback {
+	/**
+	 * 使用内部类来实现的方式
+	 * @author xiaodu.email@gmail.com
+	 */
 	private static void innerMain() {
 		Server server = new Server();
 		server.answer(new IClient() {

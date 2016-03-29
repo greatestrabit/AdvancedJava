@@ -24,6 +24,11 @@ class B {
 	}
 }
 
+/**
+ * 面向对象的相互调用
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class SyncOOCallback {
 	public static void main(final String[] args) {
 		B b = new B();

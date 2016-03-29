@@ -3,6 +3,11 @@ package com.xiaodu.callback.e;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 基于线程池的异步回调
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class ThreadpoolCallback {
 	public static void main(final String[] args) {
 		ExecutorService es = Executors.newCachedThreadPool();

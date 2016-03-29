@@ -1,6 +1,15 @@
 package com.xiaodu.callback.d;
 
+/**
+ * 基于接口的异步回调,每次建立新的线程
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class AsyncInterfaceCallback {
+	/**
+	 * 使用内部类的实现方式,此处可见回调地狱
+	 * @author xiaodu.email@gmail.com
+	 */
 	private static void innerMain() {
 		Server server = new Server();
 

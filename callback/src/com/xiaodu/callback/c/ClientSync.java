@@ -1,5 +1,10 @@
 package com.xiaodu.callback.c;
 
+/**
+ * 发出请求者,同时要处理请求结果
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class ClientSync implements IClient {
 	private final Server server;
 

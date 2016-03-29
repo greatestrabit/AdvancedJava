@@ -1,5 +1,10 @@
 package com.xiaodu.callback.e;
 
+/**
+ * 专门用来执行请求的任务,供线程池调用
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class ClientRunnable implements IClient, Runnable {
 	private final Server server;
 	private final String question;

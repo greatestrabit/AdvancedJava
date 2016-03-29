@@ -7,9 +7,13 @@ public class ClientAsync implements IClient {
 		this.server = server;
 	}
 
+	/**
+	 * 在线程中发出请求
+	 * @author xiaodu.email@gmail.com
+	 * @param question
+	 */
 	public void ask(final String question) {
 		new Thread(new Runnable() {
-
 			@Override
 			public void run() {
 				server.answer(ClientAsync.this, question);
