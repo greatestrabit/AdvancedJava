@@ -38,6 +38,7 @@ public class Client {
 				while (true) {
 					service.execute(new MsgSendTask(serialNo));
 
+					//暂不考虑序列号重复使用的问题
 					serialNo++;
 
 					if (serialNo % 10 == 0) {
