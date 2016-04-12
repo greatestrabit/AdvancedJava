@@ -16,8 +16,8 @@ public class Client {
 
 	private static void init() {
 		try {
-			SecretKeySpec keySpec = new SecretKeySpec(Config.secretKey.getBytes(), Config.algrithm);
-			mac = Mac.getInstance(Config.algrithm);
+			SecretKeySpec keySpec = new SecretKeySpec(Config.secretKey.getBytes(), Config.algorithm);
+			mac = Mac.getInstance(Config.algorithm);
 			mac.init(keySpec);
 		} catch (Exception e) {
 			e.printStackTrace();

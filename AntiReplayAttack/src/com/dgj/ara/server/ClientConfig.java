@@ -7,18 +7,18 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 public class ClientConfig {
-	private final String algrithm;
+	private final String algorithm;
 	private final String secretKey;
 	private Mac mac;
 	private final Vector<Integer> validNumbers = new Vector<Integer>();
 
-	public ClientConfig(final String secrectKey, final String algrithm) {
-		this.algrithm = algrithm;
+	public ClientConfig(final String secrectKey, final String algorithm) {
+		this.algorithm = algorithm;
 		this.secretKey = secrectKey;
 
 		try {
-			SecretKeySpec keySpec = new SecretKeySpec(secrectKey.getBytes(), algrithm);
-			this.mac = Mac.getInstance(algrithm);
+			SecretKeySpec keySpec = new SecretKeySpec(secrectKey.getBytes(), algorithm);
+			this.mac = Mac.getInstance(algorithm);
 			mac.init(keySpec);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -53,10 +53,10 @@ public class ClientConfig {
 	}
 
 	/**
-	 * @return algrithm
+	 * @return algorithm
 	 */
-	public String getAlgrithm() {
-		return algrithm;
+	public String getAlgorithm() {
+		return algorithm;
 	}
 
 	public int getFirst() {
@@ -81,7 +81,7 @@ public class ClientConfig {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("ClientConfig [algrithm=");
-		builder.append(algrithm);
+		builder.append(algorithm);
 		builder.append(", secretKey=");
 		builder.append(secretKey);
 		builder.append(", mac=");
