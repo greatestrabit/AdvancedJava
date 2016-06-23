@@ -16,8 +16,8 @@ public class Client {
 
 	private static void init() {
 		try {
-			SecretKeySpec keySpec = new SecretKeySpec(Config.secretKey.getBytes(), Config.algrithm);
-			mac = Mac.getInstance(Config.algrithm);
+			SecretKeySpec keySpec = new SecretKeySpec(Config.secretKey.getBytes(), Config.algorithm);
+			mac = Mac.getInstance(Config.algorithm);
 			mac.init(keySpec);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -38,6 +38,7 @@ public class Client {
 				while (true) {
 					service.execute(new MsgSendTask(serialNo));
 
+					//暂不考虑序列号重复使用的问题
 					serialNo++;
 
 					if (serialNo % 10 == 0) {

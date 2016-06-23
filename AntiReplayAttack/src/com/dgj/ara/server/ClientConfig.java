@@ -6,19 +6,24 @@ import java.util.Vector;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+/**
+ * 某客户端,只需要保存algorithm和secretKey这两个变量,其余可自动生成
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class ClientConfig {
-	private final String algrithm;
+	private final String algorithm;
 	private final String secretKey;
 	private Mac mac;
-	private final Vector<Integer> validNumbers = new Vector<Integer>();
+	private final Vector<Integer> validNumberArray = new Vector<Integer>();
 
-	public ClientConfig(final String secrectKey, final String algrithm) {
-		this.algrithm = algrithm;
+	public ClientConfig(final String secrectKey, final String algorithm) {
+		this.algorithm = algorithm;
 		this.secretKey = secrectKey;
 
 		try {
-			SecretKeySpec keySpec = new SecretKeySpec(secrectKey.getBytes(), algrithm);
-			this.mac = Mac.getInstance(algrithm);
+			SecretKeySpec keySpec = new SecretKeySpec(secrectKey.getBytes(), algorithm);
+			this.mac = Mac.getInstance(algorithm);
 			mac.init(keySpec);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -26,41 +31,47 @@ public class ClientConfig {
 
 		int start = new Random().nextInt(10000);
 		for (int i = 0; i < 20; i++) {
-			this.validNumbers.add(start + i);
+			this.validNumberArray.add(start + i);
 		}
 	}
 
+	/**
+	 * 验证序列号是否在合法列表中,多线程情况下,该方法需要同步
+	 * @author xiaodu.email@gmail.com
+	 * @param serialNo
+	 * @return
+	 */
 	public synchronized boolean checkSerialNo(final int serialNo) {
-		int index = this.validNumbers.indexOf(serialNo);
+		int index = this.validNumberArray.indexOf(serialNo);
 
 		if (index < 0) {
 			return false;
 		} else {
-			this.validNumbers.remove(index);
-			int max = this.validNumbers.get(this.validNumbers.size() - 1);
-			this.validNumbers.add(max + 1);
-			int min = this.validNumbers.get(0);
+			this.validNumberArray.remove(index);
+			int max = this.validNumberArray.get(this.validNumberArray.size() - 1);
+			this.validNumberArray.add(max + 1);
+			int min = this.validNumberArray.get(0);
 
 			if (max - min > 100) {
-				this.validNumbers.remove(0);
-				this.validNumbers.add(max + 2);
+				this.validNumberArray.remove(0);
+				this.validNumberArray.add(max + 2);
 			}
 
-			System.out.println(this.validNumbers);
+			System.out.println(this.validNumberArray);
 
 			return true;
 		}
 	}
 
 	/**
-	 * @return algrithm
+	 * @return algorithm
 	 */
-	public String getAlgrithm() {
-		return algrithm;
+	public String getAlgorithm() {
+		return algorithm;
 	}
 
 	public int getFirst() {
-		return this.validNumbers.get(0);
+		return this.validNumberArray.get(0);
 	}
 
 	/**
@@ -81,13 +92,13 @@ public class ClientConfig {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("ClientConfig [algrithm=");
-		builder.append(algrithm);
+		builder.append(algorithm);
 		builder.append(", secretKey=");
 		builder.append(secretKey);
 		builder.append(", mac=");
 		builder.append(mac);
 		builder.append(", validNumbers=");
-		builder.append(validNumbers);
+		builder.append(validNumberArray);
 		builder.append("]");
 		return builder.toString();
 	}

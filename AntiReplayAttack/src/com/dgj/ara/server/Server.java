@@ -7,8 +7,13 @@ import java.util.Map;
 import com.sun.net.httpserver.HttpServer;
 
 public class Server {
+	/**
+	 * 该服务器需要管理众多客户端
+	 * @author xiaodu.email@gmail.com
+	 */
 	public static Map<String, ClientConfig> ccMap = new HashMap<String, ClientConfig>();
 
+	//客户端数据初始化
 	static {
 		ClientConfig cc = new ClientConfig("qnscAdgRlkIhAUPY44oiexBKtQbGY0orf7OV1I50", "HmacSHA1");
 		ccMap.put("123456", cc);

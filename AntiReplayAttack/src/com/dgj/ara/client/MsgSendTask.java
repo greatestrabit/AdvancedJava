@@ -5,6 +5,11 @@ import java.util.Random;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+/**
+ * 待执行任务,未处理失败重发
+ * @author xiaodu.email@gmail.com
+ *
+ */
 public class MsgSendTask implements Runnable {
 	private final int serialNo;
 
@@ -15,6 +20,7 @@ public class MsgSendTask implements Runnable {
 	@Override
 	public void run() {
 		try {
+			//模拟线程执行顺序不定的情况
 			Thread.sleep(new Random().nextInt(1000));
 
 			String query = "msg=thisisamessage&serial=" + this.serialNo + "&id=" + Config.cliendId;
